@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+
+    <title>Buoyancy</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body onload="getResolution()">
+    <div class="shortcut">
+
+    <div id="sim" style="transform: rotate(180deg);" href="#simulator"  ><svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 5L5 1L9 5" stroke="black" stroke-linecap="round"/>
+        </svg>
+        </div>
+      
+    <div class="arrow"></div>
+    <div class="dropdown">Jump to Simulator</div>    
+
+    </div>
+<section class="info">
+
+<div class="part hero">
+    <h2 class="heading">O QUE É FLUTUABILIDADE?</h2>
+
+    <P>Flutuabilidade é a força que faz com que objetos flutuem. É a força exercida sobre um objeto que está parcial ou totalmente imerso em um fluido. A flutuabilidade é causada pelas diferenças de pressão atuando nos lados opostos de um objeto imerso em um fluido estático. Também é conhecida como a força de empuxo. A flutuabilidade é o fenômeno devido à Força de Empuxo.</P>
+</div>
+
+<div class="part hero2">
+    <p>Em geral, a força de empuxo em um objeto completamente submerso é dada pela fórmula:</p>
+    <br>
+    <p class="formula"><strong>FB=Vρg</strong></p>
+    <br>
+    <p>V = Volume do Objeto,</p>
+    <p>ρ= Densidade do Fluído</p>
+    <p>g = Aceleração Gravitacional.</p>
+    
+</div>
+
+<div class="part col">
+
+    <div class="text">
+
+        <p>Agora, como o objeto está flutuando no líquido, duas forças estão atuando nele.</p>
+        
+
+        <ul>
+            <li>FORÇA DE EMPUXO </li>
+            <li>O PRÓPRIO PESO</li>
+        </ul>
+
+<p>Agora, como as forças do líquido empurram o objeto para cima, ou seja, a flutuabilidade,</p> 
+
+  <p>  seu próprio peso está empurrando o objeto para baixo devido à força gravitacional, </p>
+
+<p>Então, é como se ambas as forças estivessem competindo e exercendo força sobre o objeto.</p>
+    </div>
+
+    <div class="image">
+        <img src="Buoyancy.jpg"   alt="">
+    </div>
+
+</div>
+
+<div class="part hero3">
+        <p>A expressão para o peso de um objeto é dada por:</p>
+        <br>
+        <p> <strong>W=Vρ<sub>o</sub> g</strong></p>
+        <br>
+        <p>   V = Volume do Objeto,</p>
+       <p> ρ<sub>o</sub> = Densidade do objeto e </p>
+       <p> g = Aceleração Gravitacional.</p>
+    
+</div>
+
+
+</section>
+
+<section id="simulator">
+
+    <button class="reset" onclick="reset()">Reset</button>
+ 
+
+    <div class="value">
+
+    <span class="input">
+
+        <label>
+            Object density : <span id="o-value">0</span>
+        <span>g/cm<sup>3</sup></span>
+        <span id="o-dropdown-icon"><img src="arrow-down.svg" alt="" onclick="oDropdown()"></span>
+        <div class="o-density-dropdown" >
+            <div id="o-drop1" >SÓDIO =  <span>0.97 g/cm<sup>3</sup></span></div>
+            <div id="o-drop2" >ALUMÍNIO =  <span>2.7 g/cm<sup>3</sup></span></div>
+            <div id="o-drop3" >FERRO =  <span>7.87 g/cm<sup>3</sup></span></div>
+            <div id="o-drop4" >OURO=  <span>19.32 g/cm<sup>3</sup></span></div>
+        </div>
+    </label>
+
+        <br>
+        <input type="range" id="o-input" value="1" min="100" max="2000" onchange="updateOInput()" />
+
+       
+    </span>
+
+   
+
+    <span class="input">
+
+        <label>Fluid density : <span id="l-value">0</span>
+        <span>g/cm<sup>3</sup></span>
+        <span id="l-dropdown-icon"><img src="arrow-down.svg" alt="" onclick="lDropdown()"></span>
+        <div class="l-density-dropdown">
+            <div id="l-drop1">ÁGUA = <span>0.1  g/cm<sup>3</sup></span></div>
+            <div id="l-drop2">QUEROSENE = <span>0.8  g/cm<sup>3</sup></span></div>
+            <div id="l-drop3">GALINSTAN =  <span>6.44 g/cm<sup>3</sup></span></div>
+            <div id="l-drop4">MERCÚRIO = <span>13.6  g/cm<sup>3</sup></span></div>
+            
+        </div>
+    </label>
+       
+        <br>
+        <input type="range" id="l-input" value="1" min="100" max="2000" onchange="updateLInput()" />
+        
+       
+    </span>
+    
+</div>
+
+<div class="tank-flex">
+
+    <div class="extra-value">
+         <div>Volume do Objeto = <span>1000 cm<sup>3</sup></span></div>
+         <div>Massa do Objeto  = <span id="mass-o-value">1000 g</span></div>
+         <div>Peso do Objeto = <span id="weight-o-value">98 N</span></div>
+        <div>Força de Empuxo= <span id="buoyant-l-value">1000 N</span></div>
+        <div>% Submersa = <span id="submerged-value"> 50%</span></div>
+    </div>
+
+
+    <div class="tank-container">
+
+                    
+            <svg width="713" height="383" viewBox="0 0 713 383" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect id="water" name="water" x="167.5" y="51.5" width="544" height="222" fill="#ABE2FC" stroke="#9D9D9D"/>
+                <path id="water" name="water" d="M167 51.5L1 146.5V381L167 273.5V51.5Z" fill="#A6E1FD" stroke="#9D9D9D"/>
+                <rect x="167.5" y="1.5" width="545" height="272" stroke="black"/>
+                <path d="M167.5 1.5L0.5 96.5V381L168.5 273.5L167.5 1.5Z" stroke="black"/>
+                <rect id="block" name="block" x="264.5" y="71.75" width="91.6667" height="74.75" fill="white" stroke="black"/>
+                <path id="block" name="block" d="M398.5 46.5L356.358 71.5024V146.747L398.5 117V46.5Z" fill="white" stroke="black"/>
+                <path id="block" name="block" d="M356 71.5H264.5L310.5 46.5H398.5L356 71.5Z" fill="white" stroke="black"/>
+                <path id="water" name="water" d="M446.5 52.5L356.5 111.5V147.5H570L713 52.5H657.5H446.5Z" fill="#A2E0FF" fill-opacity="0.49"/>
+                <path id="water" name="water" d="M67 110L355.5 112L357 147H1L67 110Z" fill="#A2E0FF" fill-opacity="0.49"/>
+                <path id="water" name="water" d="M712 51.5L569.5 146.5V381.5L712 273.5V51.5Z" fill="#A2E0FF" fill-opacity="0.49" stroke="#9D9D9D"/>
+                <path  d="M712.5 1.5L569.5 96.5V381.5L712.5 273.5V1.5Z" stroke="black"/>
+                <rect id="water" name="water" x="0.5" y="147.5" width="568" height="234" fill="#A2E0FF" fill-opacity="0.49" stroke="#9D9D9D"/>
+                <rect x="0.5" y="96.5" width="569" height="285" stroke="black"/>
+                </svg>
+        </div>
+
+    </div>
+
+<button class="btn full-screen " onclick="Fullscreen()" ><img src="maximize.svg" alt=""></button>
+<button class="btn min-screen " onclick="exitFullscreen()"><img src="minimize.svg" alt=""></button>
+</section>
+
+<!-- <script src="index.js"></script> -->
+<script src="script.js"></script>
+
+</body>
+</html>
