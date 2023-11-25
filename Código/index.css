@@ -4,10 +4,10 @@
 
     outline: none;
 
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
     box-sizing: border-box;
 
-    color: #74abca;
+    color: #39708b;
 
 
 }
@@ -16,24 +16,24 @@
 
 .info {
     width: 99%;
-  
+
 }
 
-section{
+section {
     margin: 10px;
     width: 99%;
 }
 
 
 #sim {
-    display: flex ;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     height: 24px;
     width: 24px;
     right: 30px;
-    animation: lazy-sim 0.8s  forwards;
+    animation: lazy-sim 0.8s forwards;
     animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
 }
 
@@ -42,13 +42,14 @@ section{
     border-radius: 50%;
 }
 
-#sim:hover ~ .dropdown , #sim:hover + div {
-    opacity : 1 ;
+#sim:hover~.dropdown,
+#sim:hover+div {
+    opacity: 1;
 }
 
 .arrow {
     display: inline-block;
-    height: 20px ;
+    height: 20px;
     width: 20px;
     background-color: #ccc;
 
@@ -61,7 +62,7 @@ section{
 
 .dropdown {
     display: inline-block;
-    height: auto ;
+    height: auto;
     width: auto;
     background-color: #ccc;
     padding: 5px;
@@ -74,7 +75,7 @@ section{
     font-size: 0.5rem;
     color: black;
 
-    transform: translate(35% , 20%);
+    transform: translate(35%, 20%);
     opacity: 0;
 }
 
@@ -84,88 +85,87 @@ section{
     display: block;
     width: 100%;
     margin: 30px 0 30px 0;
-  
-    
+    text-align: justify;
+
 }
 
 p {
-    
-  
+
+
     line-height: 2.5rem;
     margin: 5px 0px;
     opacity: 0;
     font-weight: 300;
-    
-    font-family: 'Poppins', sans-serif;
+
+    font-family: sans-serif;
     font-size: 1.8rem;
 
-   font-display: auto;
-    
-    
+    font-display: auto;
+
+
 }
 
 
 h2 {
-
+    text-align: center;
     display: block;
-    height: auto ;
+    height: auto;
     width: 100%;
-    background-image: linear-gradient(-45deg , #0A7DB7 , #91e5ff);
+    background-image: linear-gradient(-45deg, #0A7DB7, #91e5ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #0A7DB7;
-    font-size: 3.3rem ;
-    margin-bottom: 25px  ;
+    font-size: 3.3rem;
+    margin-bottom: 25px;
     font-weight: 500;
-    
+
     animation: lazy 0.6s forwards;
     animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
-    
-    
+
+
 }
 
-.hero > p  {
+.hero>p {
 
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
     font-size: 1.8rem;
-    animation: lazy-p 0.7s  0.8s forwards;
+    animation: lazy-p 0.7s 0.8s forwards;
     animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
 }
 
-.hero2 > p , .text > p {
-    animation: lazy 0.7s  0.8s forwards;
+.hero2>p,
+.text>p {
+    animation: lazy 0.7s 0.8s forwards;
     animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
 }
 
-.hero3 > p {
-    animation: lazy 0.7s  0.8s forwards;
+.hero3>p {
+    animation: lazy 0.7s 0.8s forwards;
     animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
 }
 
 
 
-.part strong  {
-
-    font-size: 1.7rem;
-    color: #39708b;
-    border: 2px solid #39708b;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 10px 0;
-    animation: lazy 0.9s  0.8s forwards;
-    animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
-    
-}
-
-
-
-.part strong > sub{
-
+.part strong {
     font-size: 1.7rem;
     color: #39708b;
     border-radius: 5px;
-    
-    
+    animation: lazy 0.9s 0.8s forwards;
+    animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.part strong>sub {
+
+    font-size: 1.7rem;
+    color: #39708b;
+    border-radius: 5px;
+
+
 }
 
 .col {
@@ -180,21 +180,21 @@ h2 {
 ul {
     margin: 20px 0px;
 
-    animation: lazy 0.7s  0.5s forwards;
+    animation: lazy 0.7s 0.5s forwards;
     animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
 }
 
-ul > li {
-    font-size: 1.7rem ;
+ul>li {
+    font-size: 1.7rem;
     line-height: 2.25rem;
     margin: 10px 30px;
     color: #39708b;
-    animation: lazy 0.7s  0.5s forwards;
+    animation: lazy 0.7s 0.5s forwards;
     animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
     opacity: 0;
 }
 
-.text{
+.text {
     max-width: 50%;
 }
 
@@ -204,17 +204,17 @@ ul > li {
     justify-content: center;
     max-width: 50%;
     height: 100%;
-    
-    
+
+
 }
 
 .image img {
     width: 100%;
     height: auto;
     transform: scale(0.6);
-    animation: lazy-img 0.7s  0.1s forwards;
+    animation: lazy-img 0.7s 0.1s forwards;
     animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
-    
+
 }
 
 @keyframes lazy {
@@ -222,7 +222,7 @@ ul > li {
     from {
         transform: translateY(60%);
         opacity: 0;
-        
+
     }
 
     to {
@@ -252,13 +252,13 @@ ul > li {
     from {
         transform: translateY(10%) scale(0.6);
         opacity: 0;
-        
+
     }
 
     to {
-        transform: translateY(0%) scale(0.6) ;
+        transform: translateY(0%) scale(0.6);
         opacity: 1;
-        
+
     }
 
 }
@@ -268,20 +268,22 @@ ul > li {
     from {
         transform: translateY(10%) rotate(180deg);
         opacity: 0;
-        
+
     }
 
     to {
-        transform: translateY(0%) rotate(180deg) ;
+        transform: translateY(0%) rotate(180deg);
         opacity: 1;
-        
+
     }
 
 }
 
 
 
-.btn , .full-screen , .min-screen {
+.btn,
+.full-screen,
+.min-screen {
 
     display: flex;
     justify-content: center;
@@ -298,13 +300,13 @@ ul > li {
     margin: 10px;
 }
 
-.btn > img {
+.btn>img {
     display: block;
     height: 20px;
     width: 20px;
 }
 
- 
+
 .min-screen {
     display: none;
 
@@ -314,7 +316,7 @@ ul > li {
 
 
 
-.tank-container > svg {
+.tank-container>svg {
     z-index: -5;
     overflow: visible;
     width: 100%;
@@ -322,16 +324,16 @@ ul > li {
 }
 
 
-#tank-back{
+#tank-back {
     z-index: 6;
     position: absolute;
 
 }
 
-#block{
+#block {
 
-transform: translateY(10%);
-transition: transform 0.8s  cubic-bezier(0,2,1,0.5);
+    transform: translateY(10%);
+    transition: transform 0.8s cubic-bezier(0, 2, 1, 0.5);
 
 }
 
@@ -342,7 +344,7 @@ transition: transform 0.8s  cubic-bezier(0,2,1,0.5);
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+
     min-height: 80%;
     min-width: 100%;
     position: absolute;
@@ -359,7 +361,7 @@ transition: transform 0.8s  cubic-bezier(0,2,1,0.5);
     height: 80%;
     position: absolute;
     bottom: 0%;
-   
+
 
 }
 
@@ -390,7 +392,7 @@ transition: transform 0.8s  cubic-bezier(0,2,1,0.5);
 
 .input {
     max-width: 50%;
- 
+
     opacity: 1;
     display: inline-flex;
     justify-content: center;
@@ -399,19 +401,22 @@ transition: transform 0.8s  cubic-bezier(0,2,1,0.5);
     margin: 20px;
 }
 
-#o-dropdown-icon , #l-dropdown-icon{
+#o-dropdown-icon,
+#l-dropdown-icon {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     transform: translateY(6px);
 }
 
-#o-dropdown-icon:hover , #l-dropdown-icon:hover {
+#o-dropdown-icon:hover,
+#l-dropdown-icon:hover {
     background-color: #ccc;
     border-radius: 50%;
 }
 
-.o-density-dropdown , .l-density-dropdown{
+.o-density-dropdown,
+.l-density-dropdown {
     display: none;
     justify-content: center;
     align-items: center;
@@ -425,12 +430,13 @@ transition: transform 0.8s  cubic-bezier(0,2,1,0.5);
     box-shadow: 4px 4px 16px 0 rgb(235, 235, 235);
     transform: translateY(20px);
     transition: all 1s linear;
-   
+
 
 }
 
 
-.o-density-dropdown > div , .l-density-dropdown > div {
+.o-density-dropdown>div,
+.l-density-dropdown>div {
 
     display: flex;
     justify-content: space-evenly;
@@ -441,17 +447,20 @@ transition: transform 0.8s  cubic-bezier(0,2,1,0.5);
     width: 100%;
     height: 45px;
     background-color: #fff;
-    
-    
+
+
 }
 
-.o-density-dropdown > div > span , .o-density-dropdown > div > span >sup , .l-density-dropdown > div > span , .l-density-dropdown > div > span >sup {
+.o-density-dropdown>div>span,
+.o-density-dropdown>div>span>sup,
+.l-density-dropdown>div>span,
+.l-density-dropdown>div>span>sup {
     color: rgb(54, 54, 54);
 }
 
 
 
-.extra-value{
+.extra-value {
     font-size: 1.2rem;
     line-height: 45px;
     font-style: italic;
@@ -469,7 +478,7 @@ transition: transform 0.8s  cubic-bezier(0,2,1,0.5);
     top: -1%;
     background-color: #39708b;
     color: white;
-    padding: 3px 15px ;
+    padding: 3px 15px;
     border: none;
     border-radius: 5px;
 
@@ -481,42 +490,44 @@ transition: transform 0.8s  cubic-bezier(0,2,1,0.5);
     h2 {
         font-size: 3.1rem;
     }
+
     .col {
         flex-direction: column;
         width: 100%;
     }
 
-    .text{
-       max-width: 100%;
+    .text {
+        max-width: 100%;
     }
 
-    .image{
+    .image {
         max-width: 100%;
     }
 
     .image img {
         width: 100%;
         height: auto;
-    
+
     }
 
-    .tank-flex{
+    .tank-flex {
         max-height: 80%;
         flex-direction: column-reverse;
     }
 
-    .tank-container , .extra-value{
+    .tank-container,
+    .extra-value {
         height: auto;
         max-width: 100%;
         position: absolute;
     }
 
-    .tank-container{
-       
+    .tank-container {
+
         top: 0%;
         margin: 0%;
         max-height: 50%;
-      
+
     }
 
     .extra-value {
@@ -525,53 +536,56 @@ transition: transform 0.8s  cubic-bezier(0,2,1,0.5);
         max-width: 100%;
     }
 
-    .info , section {
+    .info,
+    section {
         margin: 10px;
     }
 
-  }
+}
 
-  @media only screen and (max-width: 768px) {
-    
+@media only screen and (max-width: 768px) {
+
     h2 {
         font-size: 3.1rem;
     }
+
     .col {
         flex-direction: column;
         width: 100%;
     }
 
-    .text{
-       max-width: 100%;
+    .text {
+        max-width: 100%;
     }
 
-    .image{
+    .image {
         max-width: 100%;
     }
 
     .image img {
         width: 100%;
         height: auto;
-    
+
     }
 
-    .tank-flex{
+    .tank-flex {
         max-height: 80%;
         flex-direction: column-reverse;
     }
 
-    .tank-container , .extra-value{
+    .tank-container,
+    .extra-value {
         height: auto;
         max-width: 100%;
         position: absolute;
     }
 
-    .tank-container{
-       
+    .tank-container {
+
         top: 0%;
         margin: 0%;
         max-height: 50%;
-      
+
     }
 
     .extra-value {
@@ -580,9 +594,9 @@ transition: transform 0.8s  cubic-bezier(0,2,1,0.5);
         max-width: 100%;
     }
 
-    .info , section {
+    .info,
+    section {
         margin: 10px;
     }
 
-  }
-  
+}
