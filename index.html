@@ -9,9 +9,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>FLUTUABILIDADE</title>
     <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body onload="getResolution()">
+<body>
     <section class="">
 
         <div class="part hero">
@@ -32,7 +33,7 @@
             <p class="formula"><strong>E = Vρg</strong></p>
             <br>
             <p>V = Volume do Objeto,</p>
-            <p>ρ = Densidade do Fluído</p>
+            <p>ρ = Densidade do Fluido</p>
             <p>g = Aceleração Gravitacional.</p>
 
         </div>
@@ -48,10 +49,12 @@
                     <li>O próprio peso.</li>
                 </ul>
 
-                <p>Agora, como as forças do líquido empurram o objeto para cima, ou seja, a flutuabilidade, seu próprio
-                    peso está empurrando o objeto para baixo devido à força gravitacional.</p>
+                <p>À medida que as forças do fluido impulsionam o objeto para a superfície, representando a
+                    flutuabilidade, simultaneamente, o peso próprio do objeto o empurra para baixo devido à influência
+                    da força gravitacional.</p>
 
-                <p>Então, é como se ambas as forças estivessem competindo e exercendo força sobre o objeto.</p>
+                <p>Assim, é como se ambas essas forças estivessem em uma espécie de competição, exercendo sua influência
+                    sobre o objeto.</p>
             </div>
 
             <div class="image">
@@ -78,48 +81,41 @@
 
         <button class="reset" onclick="reset()">Reset</button>
 
-
         <div class="value">
 
             <span class="input">
-
                 <label>
-                    Object density : <span id="o-value">0</span>
+                    Densidade do objeto: <span id="o-value">0</span>
                     <span>g/cm<sup>3</sup></span>
                     <span id="o-dropdown-icon"><img src="arrow-down.svg" alt="" onclick="oDropdown()"></span>
                     <div class="o-density-dropdown">
-                        <div id="o-drop1">SÓDIO = <span>0.97 g/cm<sup>3</sup></span></div>
-                        <div id="o-drop2">ALUMÍNIO = <span>2.7 g/cm<sup>3</sup></span></div>
-                        <div id="o-drop3">FERRO = <span>7.87 g/cm<sup>3</sup></span></div>
-                        <div id="o-drop4">OURO= <span>19.32 g/cm<sup>3</sup></span></div>
+                        <div id="o-drop1">SÓDIO = <span>0,97 g/cm<sup>3</sup></span></div>
+                        <div id="o-drop2">ALUMÍNIO = <span>2,7 g/cm<sup>3</sup></span></div>
+                        <div id="o-drop3">FERRO = <span>7,87 g/cm<sup>3</sup></span></div>
+                        <div id="o-drop4">OURO = <span>19,32 g/cm<sup>3</sup></span></div>
                     </div>
                 </label>
 
                 <br>
                 <input type="range" id="o-input" value="1" min="100" max="2000" onchange="updateOInput()" />
-
-
             </span>
-
-
 
             <span class="input">
 
-                <label>Fluid density : <span id="l-value">0</span>
+                <label>Densidade do fluido: <span id="l-value">0</span>
                     <span>g/cm<sup>3</sup></span>
                     <span id="l-dropdown-icon"><img src="arrow-down.svg" alt="" onclick="lDropdown()"></span>
                     <div class="l-density-dropdown">
-                        <div id="l-drop1">ÁGUA = <span>0.1 g/cm<sup>3</sup></span></div>
-                        <div id="l-drop2">QUEROSENE = <span>0.8 g/cm<sup>3</sup></span></div>
-                        <div id="l-drop3">GALINSTAN = <span>6.44 g/cm<sup>3</sup></span></div>
-                        <div id="l-drop4">MERCÚRIO = <span>13.6 g/cm<sup>3</sup></span></div>
+                        <div id="l-drop1">ÁGUA = <span>0,1 g/cm<sup>3</sup></span></div>
+                        <div id="l-drop2">QUEROSENE = <span>0,8 g/cm<sup>3</sup></span></div>
+                        <div id="l-drop3">GALINSTAN = <span>6,44 g/cm<sup>3</sup></span></div>
+                        <div id="l-drop4">MERCÚRIO = <span>13,6 g/cm<sup>3</sup></span></div>
 
                     </div>
                 </label>
 
                 <br>
                 <input type="range" id="l-input" value="1" min="100" max="2000" onchange="updateLInput()" />
-
 
             </span>
 
@@ -131,7 +127,7 @@
                 <div>Volume do Objeto = <span>1000 cm<sup>3</sup></span></div>
                 <div>Massa do Objeto = <span id="mass-o-value">1000 g</span></div>
                 <div>Peso do Objeto = <span id="weight-o-value">98 N</span></div>
-                <div>Força de Empuxo= <span id="buoyant-l-value">1000 N</span></div>
+                <div>Força de Empuxo = <span id="buoyant-l-value">1000 N</span></div>
                 <div>% Submersa = <span id="submerged-value"> 50%</span></div>
             </div>
 
@@ -167,12 +163,17 @@
 
         </div>
 
-        <button class="btn full-screen " onclick="Fullscreen()"><img src="maximize.svg" alt=""></button>
-        <button class="btn min-screen " onclick="exitFullscreen()"><img src="minimize.svg" alt=""></button>
+
     </section>
 
-    <!-- <script src="index.js"></script> -->
+    <section>
+        <div style="width: 70%;" id="grafico">
+            <canvas id="myChart"></canvas>
+        </div>
+    </section>
+
     <script src="script.js"></script>
+
 
 </body>
 
