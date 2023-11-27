@@ -8,86 +8,79 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>FLUTUABILIDADE</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../css/index.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
-    <section class="">
-
-        <div class="part hero">
-            <h2 class="">O QUE É FLUTUABILIDADE?</h2>
-
-            <P>A capacidade de flutuação se refere à força responsável por manter objetos acima da superfície de um
-                fluido. Essa força atua sobre um objeto que se encontra, total ou parcialmente, imerso em um meio
-                líquido ou gasoso. A flutuabilidade surge devido às discrepâncias de pressão que agem em lados opostos
-                de um objeto imerso em um fluido estático, sendo também denominada como força de empuxo. Essencialmente,
-                a flutuabilidade é um fenômeno associado à Força de Empuxo.
-            </P>
-        </div>
-
-        <div class="part hero2">
-            <p>Em termos gerais, a fórmula que expressa a força de empuxo em um objeto completamente submerso é a
-                seguinte:</p>
-            <br>
-            <p class="formula"><strong>E = Vρg</strong></p>
-            <br>
-            <p>V = Volume do Objeto,</p>
-            <p>ρ = Densidade do Fluido</p>
-            <p>g = Aceleração Gravitacional.</p>
-
-        </div>
-
-        <div class="part col">
-
+    <h2>O QUE É FLUTUABILIDADE?</h2>
+    <section class="box">
+        <section>
             <div class="text">
-
-                <p>Agora, como o objeto está flutuando no líquido, duas forças estão atuando nele.</p>
-
-                <ul>
-                    <li>Força de Empuxo;</li>
-                    <li>O próprio peso.</li>
-                </ul>
-
-                <p>À medida que as forças do fluido impulsionam o objeto para a superfície, representando a
-                    flutuabilidade, simultaneamente, o peso próprio do objeto o empurra para baixo devido à influência
-                    da força gravitacional.</p>
-
-                <p>Assim, é como se ambas essas forças estivessem em uma espécie de competição, exercendo sua influência
-                    sobre o objeto.</p>
+                <P>A capacidade de flutuação se refere à força responsável por manter objetos acima da superfície de um
+                    fluido. Essa força atua sobre um objeto que se encontra, total ou parcialmente, imerso em um meio
+                    líquido ou gasoso. A flutuabilidade surge devido às discrepâncias de pressão que agem em lados opostos
+                    de um objeto imerso em um fluido estático, sendo também denominada como força de empuxo. Essencialmente,
+                    a flutuabilidade é um fenômeno associado à Força de Empuxo.
+                </P>
             </div>
-
-            <div class="image">
-                <img src="Buoyancy.jpg" alt="">
+        </section>
+        <section>
+            <div class="text">
+                <p>Em termos gerais, a fórmula que expressa a força de empuxo em um objeto completamente submerso é a
+                    seguinte:</p>
+                <br>
+                <p class="formula"><strong>E = Vρg</strong></p>
+                <br>
+                <p><strong>V </strong>= Volume do Objeto,</p>
+                <p><strong>ρ </strong>= Densidade do Fluido</p>
+                <p><strong>g </strong>= Aceleração Gravitacional.</p>
             </div>
+        </section>
+        <section>
+            <div class="text1">
+                <div class="text">
+                    <p>Agora, como o objeto está flutuando no líquido, duas forças estão atuando nele.</p>
+    
+                    <ul>
+                        <li>Força de Empuxo;</li>
+                        <li>O próprio peso.</li>
+                    </ul>
+    
+                    <p>À medida que as forças do fluido impulsionam o objeto para a superfície, representando a
+                        flutuabilidade, simultaneamente, o peso próprio do objeto o empurra para baixo devido à influência
+                        da força gravitacional.</p>
+    
+                    <p>Assim, é como se ambas essas forças estivessem em uma espécie de competição, exercendo sua influência
+                        sobre o objeto.</p>
+                </div>
+    
+                <div class="image">
+                    <img src="../img/empuxo.png" alt="">
+                </div>
+            </div>
+        </section>
 
-        </div>
-
-        <div class="part hero3">
-            <p>A expressão para o peso de um objeto é dada por:</p>
-            <br>
-            <p> <strong>W = Vρ<sub>o</sub>g</strong></p>
-            <br>
-            <p> V = Volume do Objeto,</p>
-            <p> ρ<sub>o</sub> = Densidade do objeto</p>
-            <p> g = Aceleração Gravitacional.</p>
-
-        </div>
-
-
+        <section>
+            <div class="text">
+                <p>A expressão para o peso de um objeto é dada por:</p>
+                <br>
+                <p class="formula"> <strong>W = Vρ<sub>o</sub>g</strong></p>
+                <br>
+                <p> <strong>V </strong>= Volume do Objeto,</p>
+                <p> <strong>ρ<sub>o</sub></strong>= Densidade do objeto</p>
+                <p> <strong>g</strong> = Aceleração Gravitacional.</p>
+            </div>
+        </section>
     </section>
 
     <section id="simulator">
-
-        <button class="reset" onclick="reset()">Reset</button>
-
         <div class="value">
-
             <span class="input">
                 <label>
                     Densidade do objeto: <span id="o-value">0</span>
                     <span>g/cm<sup>3</sup></span>
-                    <span id="o-dropdown-icon"><img src="arrow-down.svg" alt="" onclick="oDropdown()"></span>
+                    <span id="o-dropdown-icon"><img src="../img/arrow-down.svg" alt="" onclick="oDropdown()"></span>
                     <div class="o-density-dropdown">
                         <div id="o-drop1">SÓDIO = <span>0,97 g/cm<sup>3</sup></span></div>
                         <div id="o-drop2">ALUMÍNIO = <span>2,7 g/cm<sup>3</sup></span></div>
@@ -104,7 +97,7 @@
 
                 <label>Densidade do fluido: <span id="l-value">0</span>
                     <span>g/cm<sup>3</sup></span>
-                    <span id="l-dropdown-icon"><img src="arrow-down.svg" alt="" onclick="lDropdown()"></span>
+                    <span id="l-dropdown-icon"><img src="../img/arrow-down.svg" alt="" onclick="lDropdown()"></span>
                     <div class="l-density-dropdown">
                         <div id="l-drop1">ÁGUA = <span>0,1 g/cm<sup>3</sup></span></div>
                         <div id="l-drop2">QUEROSENE = <span>0,8 g/cm<sup>3</sup></span></div>
@@ -118,12 +111,15 @@
                 <input type="range" id="l-input" value="1" min="100" max="2000" onchange="updateLInput()" />
 
             </span>
-
+            <button class="reset" onclick="reset()">Limpar</button>
         </div>
 
         <div class="tank-flex">
 
             <div class="extra-value">
+                <div id="grafico">
+                    <canvas id="myChart"></canvas>
+                </div>
                 <div>Volume do Objeto = <span>1000 cm<sup>3</sup></span></div>
                 <div>Massa do Objeto = <span id="mass-o-value">1000 g</span></div>
                 <div>Peso do Objeto = <span id="weight-o-value">98 N</span></div>
@@ -163,16 +159,10 @@
 
         </div>
 
-
     </section>
 
-    <section>
-        <div style="width: 70%;" id="grafico">
-            <canvas id="myChart"></canvas>
-        </div>
-    </section>
 
-    <script src="script.js"></script>
+    <script src="../js/script.js"></script>
 
 
 </body>

@@ -69,6 +69,13 @@ function liquidUpdate() {
 
 }
 
+// Função para atualizar o gráfico
+function updateChart() {
+    yValues = [oInput.value / 100];
+    xValues = [lInput.value / 100];
+    renderChart(yValues, xValues);
+}
+
 //Submerged Update
 
 function submergedUpdate() {
@@ -115,34 +122,29 @@ function submergedUpdate() {
 }
 
 // Object Density Dropdowns 
-
 function oDropdown() {
+    let oDensityDropdown = document.getElementsByClassName('o-density-dropdown')[0];
 
-    let oDensityDropdown = document.getElementsByClassName('o-density-dropdown')
-
-    if (oDensityDropdown[0].style.display == 'none') {
-        oDensityDropdown[0].style.display = 'inline-flex'
+    // Verifica se o display não é 'none' antes de alternar
+    if (getComputedStyle(oDensityDropdown).display !== 'none') {
+        oDensityDropdown.style.display = 'none';
+    } else {
+        oDensityDropdown.style.display = 'inline-flex';
     }
-    else {
-        oDensityDropdown[0].style.display = 'none'
-    }
-
 }
 
 // Fluid Density Dropdowns 
-
 function lDropdown() {
+    let lDensityDropdown = document.getElementsByClassName('l-density-dropdown')[0];
 
-    let lDensityDropdown = document.getElementsByClassName('l-density-dropdown')
-
-    if (lDensityDropdown[0].style.display == 'none') {
-        lDensityDropdown[0].style.display = 'inline-flex'
+    // Verifica se o display não é 'none' antes de alternar
+    if (getComputedStyle(lDensityDropdown).display !== 'none') {
+        lDensityDropdown.style.display = 'none';
+    } else {
+        lDensityDropdown.style.display = 'inline-flex';
     }
-    else {
-        lDensityDropdown[0].style.display = 'none'
-    }
-
 }
+
 
 ///////////////////////////////////////////////Object Density all Dropdown Items///////////////////////////////
 
@@ -158,7 +160,8 @@ document.getElementById('o-drop1').addEventListener('click', () => {
     document.getElementsByName('block')[2].style.fill = "#c0c0c0"
 
     objectUpdate();
-    submergedUpdate()
+    submergedUpdate();
+    updateChart()
 
 })
 
@@ -174,7 +177,8 @@ document.getElementById('o-drop2').addEventListener('click', () => {
     document.getElementsByName('block')[2].style.fill = "#848789"
 
     objectUpdate();
-    submergedUpdate()
+    submergedUpdate();
+    updateChart()
 
 })
 
@@ -190,7 +194,8 @@ document.getElementById('o-drop3').addEventListener('click', () => {
     document.getElementsByName('block')[2].style.fill = "#434B4D"
 
     objectUpdate();
-    submergedUpdate()
+    submergedUpdate();
+    updateChart()
 
 
 })
@@ -207,7 +212,8 @@ document.getElementById('o-drop4').addEventListener('click', () => {
     document.getElementsByName('block')[2].style.fill = "rgb(255 237 139)"
 
     objectUpdate();
-    submergedUpdate()
+    submergedUpdate();
+    updateChart()
 
 
 })
@@ -228,7 +234,8 @@ document.getElementById('l-drop1').addEventListener('click', () => {
     document.getElementsByName('water')[4].style.fill = "#A6E1FD"
     document.getElementsByName('water')[5].style.fill = "#A6E1FD"
     liquidUpdate();
-    submergedUpdate()
+    submergedUpdate();
+    updateChart()
 
 
 })
@@ -240,15 +247,16 @@ document.getElementById('l-drop2').addEventListener('click', () => {
     lInput.value = Math.floor(keroValue * 100)
     lValue.innerHTML = keroValue
 
-    document.getElementsByName('water')[0].style.fill = "#13B0FF"
-    document.getElementsByName('water')[1].style.fill = "#13B0FF"
-    document.getElementsByName('water')[2].style.fill = "#13B0FF"
-    document.getElementsByName('water')[3].style.fill = "#13B0FF"
-    document.getElementsByName('water')[4].style.fill = "#13B0FF"
-    document.getElementsByName('water')[5].style.fill = "#13B0FF"
+    document.getElementsByName('water')[0].style.fill = "#E8EB67"
+    document.getElementsByName('water')[1].style.fill = "#E8EB67"
+    document.getElementsByName('water')[2].style.fill = "#E8EB67"
+    document.getElementsByName('water')[3].style.fill = "#E8EB67"
+    document.getElementsByName('water')[4].style.fill = "#E8EB67"
+    document.getElementsByName('water')[5].style.fill = "#E8EB67"
 
     liquidUpdate();
-    submergedUpdate()
+    submergedUpdate();
+    updateChart()
 
 
 })
@@ -268,7 +276,8 @@ document.getElementById('l-drop3').addEventListener('click', () => {
     document.getElementsByName('water')[5].style.fill = "rgb(201, 201, 201 )"
 
     liquidUpdate();
-    submergedUpdate()
+    submergedUpdate();
+    updateChart()
 
 
 })
@@ -288,7 +297,8 @@ document.getElementById('l-drop4').addEventListener('click', () => {
     document.getElementsByName('water')[5].style.fill = "rgb(103 102 102)"
 
     liquidUpdate();
-    submergedUpdate()
+    submergedUpdate();
+    updateChart()
 
 
 })
@@ -354,7 +364,7 @@ function renderChart(yValues, xValues) {
                     display: true,
                     text: 'Densidade do objeto / Densidade do fluido',
                     font: {
-                        size: 27
+                        size: 12
                     }
                 }
             
@@ -365,7 +375,7 @@ function renderChart(yValues, xValues) {
                         display: true,
                         text: 'Densidade do objeto',
                         font: {
-                            size: 27
+                            size: 12
                         }
                     }
                 },
@@ -374,7 +384,7 @@ function renderChart(yValues, xValues) {
                         display: true,
                         text: 'Densidade do fluido',
                         font: {
-                            size: 27
+                            size: 12
                         }
                     }
                 }
