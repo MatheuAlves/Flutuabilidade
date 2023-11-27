@@ -22,7 +22,6 @@ function updateOInput() {
 
     renderChart(yValues, xValues)
 
-
 }
 
 // Fluid density
@@ -134,7 +133,6 @@ function oDropdown() {
 
 function lDropdown() {
 
-
     let lDensityDropdown = document.getElementsByClassName('l-density-dropdown')
 
     if (lDensityDropdown[0].style.display == 'none') {
@@ -162,7 +160,6 @@ document.getElementById('o-drop1').addEventListener('click', () => {
     objectUpdate();
     submergedUpdate()
 
-
 })
 
 document.getElementById('o-drop2').addEventListener('click', () => {
@@ -178,7 +175,6 @@ document.getElementById('o-drop2').addEventListener('click', () => {
 
     objectUpdate();
     submergedUpdate()
-
 
 })
 
@@ -297,49 +293,6 @@ document.getElementById('l-drop4').addEventListener('click', () => {
 
 })
 
-
-
-//FullScreen
-
-function Fullscreen() {
-
-    fullScreen[0].style.display = "none"
-    minScreen[0].style.display = "flex"
-
-
-    if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-    } else if (elem.webkitRequestFullscreen) { /* Safari */
-        elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { /* IE11 */
-        elem.msRequestFullscreen();
-    }
-
-    if (elem.requestFullscreen) {
-        elem.style.padding = "30px"
-    }
-
-}
-
-
-//Exit FullScreen 
-
-function exitFullscreen() {
-
-    minScreen[0].style.display = "none"
-    minScreen[0].style.boxShadow = "none"
-    fullScreen[0].style.display = "felx"
-
-    if (document.exitFullscreen) {
-        document.exitFullscreen();
-    } else if (document.webkitExitFullscreen) { /* Safari */
-        document.webkitExitFullscreen();
-    } else if (document.msExitFullscreen) { /* IE11 */
-        document.msExitFullscreen();
-    }
-
-}
-
 //Reset 
 
 function reset() {
@@ -367,6 +320,8 @@ function reset() {
     objectUpdate();
     liquidUpdate();
     submergedUpdate()
+
+    renderChart([1], [1])
 
 }
 
