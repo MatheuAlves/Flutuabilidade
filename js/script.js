@@ -20,6 +20,10 @@ function updateOInput() {
     yValues = [oInput.value / 100]
     xValues = [lInput.value / 100]
 
+    document.getElementsByName('block')[0].style.fill = "#b9b9b9"
+    document.getElementsByName('block')[1].style.fill = "#b9b9b9"
+    document.getElementsByName('block')[2].style.fill = "#b9b9b9"
+
     renderChart(yValues, xValues)
 
 }
@@ -35,6 +39,13 @@ function updateLInput() {
 
     yValues = [oInput.value / 100]
     xValues = [lInput.value / 100]
+
+    document.getElementsByName('water')[0].style.fill = "#d6d6d6"
+    document.getElementsByName('water')[1].style.fill = "#d6d6d6"
+    document.getElementsByName('water')[2].style.fill = "#d6d6d6"
+    document.getElementsByName('water')[3].style.fill = "#d6d6d6"
+    document.getElementsByName('water')[4].style.fill = "#d6d6d6"
+    document.getElementsByName('water')[5].style.fill = "#d6d6d6"
 
     renderChart(yValues, xValues)
 
@@ -150,14 +161,14 @@ function lDropdown() {
 
 document.getElementById('o-drop1').addEventListener('click', () => {
 
-    let sodiumValue = 0.97
+    let sodiumValue = 0.50
 
     oInput.value = Math.floor(sodiumValue * 100)
     oValue.innerHTML = sodiumValue
 
-    document.getElementsByName('block')[0].style.fill = "#c0c0c0"
-    document.getElementsByName('block')[1].style.fill = "#c0c0c0"
-    document.getElementsByName('block')[2].style.fill = "#c0c0c0"
+    document.getElementsByName('block')[0].style.fill = "#723b02"
+    document.getElementsByName('block')[1].style.fill = "#723b02"
+    document.getElementsByName('block')[2].style.fill = "#bc7707"
 
     objectUpdate();
     submergedUpdate();
@@ -167,7 +178,7 @@ document.getElementById('o-drop1').addEventListener('click', () => {
 
 document.getElementById('o-drop2').addEventListener('click', () => {
 
-    let aluValue = 2.7
+    let aluValue = 2.70
 
     oInput.value = Math.floor(aluValue * 100)
     oValue.innerHTML = aluValue
@@ -207,9 +218,9 @@ document.getElementById('o-drop4').addEventListener('click', () => {
     oInput.value = Math.floor(goldValue * 100)
     oValue.innerHTML = goldValue
 
-    document.getElementsByName('block')[0].style.fill = "rgb(255 237 139)"
-    document.getElementsByName('block')[1].style.fill = "rgb(255 237 139)"
-    document.getElementsByName('block')[2].style.fill = "rgb(255 237 139)"
+    document.getElementsByName('block')[0].style.fill = "#ffba1f"
+    document.getElementsByName('block')[1].style.fill = "#ffba1f"
+    document.getElementsByName('block')[2].style.fill = "#ffba1f"
 
     objectUpdate();
     submergedUpdate();
@@ -222,7 +233,7 @@ document.getElementById('o-drop4').addEventListener('click', () => {
 
 document.getElementById('l-drop1').addEventListener('click', () => {
 
-    let waterValue = 0.1
+    let waterValue = 0.10
 
     lInput.value = Math.floor(waterValue * 100)
     lValue.innerHTML = waterValue
@@ -242,7 +253,7 @@ document.getElementById('l-drop1').addEventListener('click', () => {
 
 document.getElementById('l-drop2').addEventListener('click', () => {
 
-    let keroValue = 0.8
+    let keroValue = 0.80
 
     lInput.value = Math.floor(keroValue * 100)
     lValue.innerHTML = keroValue
@@ -263,17 +274,17 @@ document.getElementById('l-drop2').addEventListener('click', () => {
 
 document.getElementById('l-drop3').addEventListener('click', () => {
 
-    let galistanValue = 6.44
+    let galistanValue = 1.27
 
     lInput.value = Math.floor(galistanValue * 100)
     lValue.innerHTML = galistanValue
 
-    document.getElementsByName('water')[0].style.fill = "rgb(201, 201, 201 )"
-    document.getElementsByName('water')[1].style.fill = "rgb(201, 201, 201 )"
-    document.getElementsByName('water')[2].style.fill = "rgb(201, 201, 201 )"
-    document.getElementsByName('water')[3].style.fill = "rgb(201, 201, 201 )"
-    document.getElementsByName('water')[4].style.fill = "rgb(201, 201, 201 )"
-    document.getElementsByName('water')[5].style.fill = "rgb(201, 201, 201 )"
+    document.getElementsByName('water')[0].style.fill = "red"
+    document.getElementsByName('water')[1].style.fill = "red"
+    document.getElementsByName('water')[2].style.fill = "red"
+    document.getElementsByName('water')[3].style.fill = "red"
+    document.getElementsByName('water')[4].style.fill = "red"
+    document.getElementsByName('water')[5].style.fill = "red"
 
     liquidUpdate();
     submergedUpdate();
@@ -284,7 +295,7 @@ document.getElementById('l-drop3').addEventListener('click', () => {
 
 document.getElementById('l-drop4').addEventListener('click', () => {
 
-    let mercuryValue = 13.6
+    let mercuryValue = 13.60
 
     lInput.value = Math.floor(mercuryValue * 100)
     lValue.innerHTML = mercuryValue
@@ -316,22 +327,22 @@ function reset() {
     lInput.value = intialValue
     lValue.innerHTML = `${oInput.value / 100}`
 
-    document.getElementsByName('block')[0].style.fill = "white"
-    document.getElementsByName('block')[1].style.fill = "white"
-    document.getElementsByName('block')[2].style.fill = "white"
+    document.getElementsByName('block')[0].style.fill = "#b9b9b9"
+    document.getElementsByName('block')[1].style.fill = "#b9b9b9"
+    document.getElementsByName('block')[2].style.fill = "#b9b9b9"
 
-    document.getElementsByName('water')[0].style.fill = "#A2E0FF"
-    document.getElementsByName('water')[1].style.fill = "#A2E0FF"
-    document.getElementsByName('water')[2].style.fill = "#A2E0FF"
-    document.getElementsByName('water')[3].style.fill = "#A2E0FF"
-    document.getElementsByName('water')[4].style.fill = "#A2E0FF"
-    document.getElementsByName('water')[5].style.fill = "#A2E0FF"
+    document.getElementsByName('water')[0].style.fill = "#d6d6d6"
+    document.getElementsByName('water')[1].style.fill = "#d6d6d6"
+    document.getElementsByName('water')[2].style.fill = "#d6d6d6"
+    document.getElementsByName('water')[3].style.fill = "#d6d6d6"
+    document.getElementsByName('water')[4].style.fill = "#d6d6d6"
+    document.getElementsByName('water')[5].style.fill = "#d6d6d6"
 
     objectUpdate();
     liquidUpdate();
     submergedUpdate()
 
-    renderChart([1], [1])
+    renderChart([1.00], [1.00])
 
 }
 
