@@ -10,6 +10,12 @@
     <title>FLUTUABILIDADE</title>
     <link rel="stylesheet" href="../css/index.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
 </head>
 
 <body onload="reset()">
@@ -19,8 +25,10 @@
             <div class="text">
                 <P>A capacidade de flutuação se refere à força responsável por manter objetos acima da superfície de um
                     fluido. Essa força atua sobre um objeto que se encontra, total ou parcialmente, imerso em um meio
-                    líquido ou gasoso. A flutuabilidade surge devido às discrepâncias de pressão que agem em lados opostos
-                    de um objeto imerso em um fluido estático, sendo também denominada como força de empuxo. Essencialmente,
+                    líquido ou gasoso. A flutuabilidade surge devido às discrepâncias de pressão que agem em lados
+                    opostos
+                    de um objeto imerso em um fluido estático, sendo também denominada como força de empuxo.
+                    Essencialmente,
                     a flutuabilidade é um fenômeno associado à Força de Empuxo.
                 </P>
             </div>
@@ -41,20 +49,22 @@
             <div class="text1">
                 <div class="text">
                     <p>Agora, como o objeto está flutuando no líquido, duas forças estão atuando nele.</p>
-    
+
                     <ul>
                         <li>Força de Empuxo;</li>
                         <li>O próprio peso.</li>
                     </ul>
-    
+
                     <p>À medida que as forças do fluido impulsionam o objeto para a superfície, representando a
-                        flutuabilidade, simultaneamente, o peso próprio do objeto o empurra para baixo devido à influência
+                        flutuabilidade, simultaneamente, o peso próprio do objeto o empurra para baixo devido à
+                        influência
                         da força gravitacional.</p>
-    
-                    <p>Assim, é como se ambas essas forças estivessem em uma espécie de competição, exercendo sua influência
+
+                    <p>Assim, é como se ambas essas forças estivessem em uma espécie de competição, exercendo sua
+                        influência
                         sobre o objeto.</p>
                 </div>
-    
+
                 <div class="image">
                     <img src="../img/empuxo.png" alt="">
                 </div>
@@ -78,38 +88,56 @@
         <div class="value">
             <span class="input">
                 <label>
-                    Densidade do objeto: <span id="o-value">1.00</span>
-                    <span>g/cm<sup>3</sup></span>
-                    <span id="o-dropdown-icon"><img src="../img/arrow-down.svg" alt="" onclick="oDropdown()"></span>
-                    <div class="o-density-dropdown">
-                        <div id="o-drop1">MADEIRA = <span>0,50 g/cm<sup>3</sup></span></div>
-                        <div id="o-drop2">ALUMÍNIO = <span>2,70 g/cm<sup>3</sup></span></div>
-                        <div id="o-drop3">FERRO = <span>7,87 g/cm<sup>3</sup></span></div>
-                        <div id="o-drop4">OURO = <span>19,32 g/cm<sup>3</sup></span></div>
-                    </div>
-                </label>
 
-                <br>
-                <input type="range" id="o-input" value="1" min="100" max="2000" onchange="updateOInput()" />
+                    <div class="dropdown">
+                        <label>
+                            Densidade do objeto: <span id="o-value">1.00</span>
+                            <span>g/cm<sup>3</sup></span>
+                            <a class="btn btn-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false"></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" id="o-drop1"
+                                        onclick="selectDensity('MADEIRA', 0.50)">MADEIRA = <span>0,50
+                                            g/cm<sup>3</sup></span></a></li>
+                                <li><a class="dropdown-item" id="o-drop2"
+                                        onclick="selectDensity('ALUMÍNIO', 2.70)">ALUMÍNIO = <span>2,70
+                                            g/cm<sup>3</sup></span></a></li>
+                                <li><a class="dropdown-item" id="o-drop3" onclick="selectDensity('FERRO', 7.87)">FERRO =
+                                        <span>7,87 g/cm<sup>3</sup></span></a></li>
+                                <li><a class="dropdown-item" id="o-drop4" onclick="selectDensity('OURO', 19.32)">OURO =
+                                        <span>19,32 g/cm<sup>3</sup></span></a></li>
+                            </ul>
+                        </label>
+                        <br>
+                        <input type="range" id="o-input" value="1" min="100" max="2000" onchange="updateOInput()" />
+                    </div>
+
+                </label>
             </span>
 
             <span class="input">
 
-                <label>Densidade do fluido: <span id="l-value">1.00</span>
+                <label>
+                    <div class="dropdown">
+                    Densidade do fluido: <span id="l-value">1</span>
                     <span>g/cm<sup>3</sup></span>
-                    <span id="l-dropdown-icon"><img src="../img/arrow-down.svg" alt="" onclick="lDropdown()"></span>
-                    <div class="l-density-dropdown">
-                        <div id="l-drop1">ÁGUA = <span>0,10 g/cm<sup>3</sup></span></div>
-                        <div id="l-drop2">QUEROSENE = <span>0,80 g/cm<sup>3</sup></span></div>
-                        <div id="l-drop3">GELATINA = <span>1,27 g/cm<sup>3</sup></span></div>
-                        <div id="l-drop4">MERCÚRIO = <span>13,60 g/cm<sup>3</sup></span></div>
 
-                    </div>
+                    <a class="btn btn-white dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false"></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" id="l-drop1" onclick="selectDensity('ÁGUA', 0.1)">ÁGUA = <span>0,1
+                                    g/cm<sup>3</sup></span></a></li>
+                        <li><a class="dropdown-item" id="l-drop2" onclick="selectDensity('QUEROSENE', 0.8)">QUEROSENE =
+                                <span>0,8 g/cm<sup>3</sup></span></a></li>
+                        <li><a class="dropdown-item" id="l-drop3" onclick="selectDensity('GELATINA', 1.27)">GELATINA =
+                                <span>1,27 g/cm<sup>3</sup></span></a></li>
+                        <li><a class="dropdown-item" id="l-drop4" onclick="selectDensity('MERCÚRIO', 13.6)">MERCÚRIO =
+                                <span>13,6 g/cm<sup>3</sup></span></a></li>
+                    </ul>
                 </label>
-
                 <br>
                 <input type="range" id="l-input" value="1" min="100" max="2000" onchange="updateLInput()" />
-
+            </div>
             </span>
             <button class="reset" onclick="reset()">Limpar</button>
         </div>
